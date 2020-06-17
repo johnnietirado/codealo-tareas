@@ -1,38 +1,100 @@
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 640px;
   display: flex;
   flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid #FF0000;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.agregar-nuevo {
+  display: flex;
+  border-bottom: 1px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.agregar-nuevo input {
+  flex: 1;
+  border: 0;
+  font-size: 16px;
+  padding: 10px 0px;
+  white-space: pre;
+}
+
+.agregar-nuevo input:focus {
+  outline: none;
+}
+
+.agregar-nuevo button {
+  background-color: white;
+  border: none;
+}
+
+.agregar-nuevo button:focus {
+  outline: none;
+}
+
+.agregar-nuevo button:hover {
+  opacity: 0.7;
+}
+
+.agregar-nuevo .agregar-btn { 
+  width: 40px;
+  height: 38px;
+}
+
+.lista-tareas ol{
+  padding-inline-start: 0px;
+  list-style-type: none;
+}
+
+.lista-tareas li {
+  padding: 10px 0px;
+}
+
+.lista-tareas .tarea  {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: stretch;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #CECECE;
+}
+
+.lista-tareas .indice  {
+  padding-right: 5px;
+}
+
+.lista-tareas .tarea .contenido {
+  flex: 1;
+  cursor: pointer;
+}
+
+.lista-tareas .tarea .contenido.completado {
+  text-decoration: line-through;
+}
+
+.borrar {
+  flex: 0;
+  cursor: pointer;
+  min-width: 40px;
+  text-align: center;
 }
